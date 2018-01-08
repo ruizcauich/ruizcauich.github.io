@@ -9,8 +9,8 @@ function desplegarContacto(){
   var iframe = document.createElement("iframe");
   span_close.classList.add("close_window");
   contacto.classList.add("contact_window");
-  iframe.src="https://docs.google.com/forms/d/e/1FAIpQLSeZ_w9wQelPk2AWB1mL9hdnCVDfC0KIdzUR9HWc7UwMVdbcWg/viewform?embedded=true"
-  /*<iframe src="" width="760" height="500" frameborder="0" marginheight="0" marginwidth="0">Cargando…</iframe>*/
+  iframe.src="https://docs.google.com/forms/d/e/1FAIpQLSdk3yeLV2rSIsRXa5mfFpfGnNxqkvsqb6XJslHNTiPunIg8RQ/viewform?embedded=true"
+  //<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdk3yeLV2rSIsRXa5mfFpfGnNxqkvsqb6XJslHNTiPunIg8RQ/viewform?embedded=true" width="760" height="500" frameborder="0" marginheight="0" marginwidth="0">Cargando…</iframe>
   span_close.innerHTML="Close";
 
 

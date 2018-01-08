@@ -139,25 +139,38 @@ header.main-head .brand{
 
 #contacto:hover{
   cursor: pointer;
+  
+  
 }
 
+.close_window{
+  position: absolute;
+  color: #fff;
+  top: 20px;
+  left: 20px;
+  
+}
 .close_window:hover{
   cursor: pointer;
+  font-weight: bolder;
+  color: #11A747;
 }
 
 .contact_window{
   position: fixed;
-  width: 450px;
-  height: 530px;
-  top:60px;
-  left: 200px;
-  background-color: #fff;
+  width: 100%;
+  height: 100%;
+  top:0;
+  left:0;
+  background-color: #272323e6;
 
 }
 .contact_window iframe{
   display: block;
   height: 500px;
-  width: 100%;
+  width: 400px;
+  margin: 0 auto;
+  margin-top:50px;
   background-image: url("../img/loading.gif");
   background-repeat: no-repeat;
   background-position: 45% 45%;
