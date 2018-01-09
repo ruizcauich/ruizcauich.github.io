@@ -41,6 +41,7 @@ header.main-head .brand{
   margin: auto;
   border-radius: 90px;
   overflow: hidden;
+  margin-top: 10px;
 }
 .personal-image img{ width: inherit; height: inherit;}
 
@@ -98,7 +99,7 @@ header.main-head .brand{
   color: #FFF;
   width: 100%;
 }
-.submenu{
+.menu li.submenu{
   display: inline-block;
   position: relative;
   padding-left: 0px;
@@ -106,6 +107,7 @@ header.main-head .brand{
 }
 .submenu .submenu-label{
   color: #FFF;
+  padding-left: 20px;
 
 }
 .submenu:hover{
@@ -165,12 +167,16 @@ header.main-head .brand{
   background-color: #272323e6;
 
 }
+.contact_window:hover{
+  cursor: pointer;
+}
 .contact_window iframe{
   display: block;
   height: 500px;
-  width: 400px;
+  width: 700px;
   margin: 0 auto;
   margin-top:50px;
+  background-color: #fff;
   background-image: url("../img/loading.gif");
   background-repeat: no-repeat;
   background-position: 45% 45%;

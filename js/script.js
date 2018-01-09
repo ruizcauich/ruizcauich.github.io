@@ -23,4 +23,10 @@ function desplegarContacto(){
       document.body.removeChild(this.parentNode);
     }
   )
+
+  contacto.addEventListener("click",
+    function(){
+      document.body.removeChild(this);
+    }
+  );
 }
