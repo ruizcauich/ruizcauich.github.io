@@ -140,7 +140,11 @@ aside.themes, main{
     width: 100%;
     min-height: 60px;
     margin-top: 20px;
-    padding-left: 20px;
+    padding: 5px 20px;
+}
+
+.page-footer .contact-info{
+    float: right;
 }
 
 ul li  a{
@@ -175,6 +179,9 @@ ul li details:hover{
     }
 }
 @media only screen and (max-width: 768px){
+    .page-footer .contact-info{
+        float: none;
+    }
     .code-section{
         width: 90%;
         overflow: scroll;
