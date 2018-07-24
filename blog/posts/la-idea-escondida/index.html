@@ -18,10 +18,18 @@ La idea escondida, el problema para escribir.
 <body>
     <header class="main-header">
         <nav >
-            <a class="brand" href="/">
-                <img src="https://scontent.fmid2-1.fna.fbcdn.net/v/t1.0-9/28872284_1464725923654293_6100763787041052738_n.jpg?oh=a08684b7ffdfe5a0840d845065c3511d&oe=5B2DD80A" alt="Ir al sitio raiz.">
-            </a>
+            
+            <input type="checkbox" id="toggle-check" >
+            <label for="toggle-check" class="menu-toggle-icon">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+        
             <ul class="main-menu">
+                <li>
+                    <a href="/">Inicio</a>
+                </li>
                 <li>
                     <a href="/blog">Blog</a>
                 </li>
@@ -42,8 +50,8 @@ La idea escondida, el problema para escribir.
        
  <aside class="themes">
         
-    <ul class="menu order-menu">
-        
+    <ol reversed id="posts-list">
+        <!-- 
         <li class="order-item" data-date="April 7, 2018"> 
             <a href="/blog/posts/la-idea-escondida">07-04-18-La idea escondida, el problema para escribir.</a> 
             
@@ -53,7 +61,7 @@ La idea escondida, el problema para escribir.
             <a href="/blog/posts/aprender-para-hacer-un-blog">21-03-18-Aprender para hacer un blog, mi primer post.</a> 
             
         </li>
-        
+         -->
                 
         <!--li><details open>
             <summary>HTML 5</summary>
@@ -73,7 +81,7 @@ La idea escondida, el problema para escribir.
                 
             </ul>
         </details></li-->
-    </ul>
+    </ol>
    
 </aside>
 <main>
@@ -145,6 +153,10 @@ La idea escondida, el problema para escribir.
     </article>
     
 </main>
+    
+    
+    
+<script src="/static/js/order.js"></script>
 
     </div>
     <footer class="page-footer">
@@ -153,9 +165,7 @@ La idea escondida, el problema para escribir.
             <span class="contact-info">e-mail: <a href="#">contacto.augustoruiz@gmail.com</a></span>
         </p>
     </footer>
-    <script src="/static/js/order.js">
-
     
-    </script>
+
 </body>
 </html>
