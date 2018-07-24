@@ -1,48 +1,29 @@
-html, body{margin: 0}
+@import url('https://fonts.googleapis.com/css?family=Open+Sans|Roboto');
+html, body{margin: 0; font-family: 'Roboto', sans-serif; }
 *{
     box-sizing: border-box;
+}
+h1,h2,h3,h4,h5,h6{ font-family: 'Open Sans', sans-serif; font-weight: lighter}
+p{ line-height: 24px}
+.main-menu, .wraper {
+    display:flex;
+    flex-flow: row wrap; 
+    justify-content: center;
+    width: 70%;
+    margin: 0 auto;
 }
 .main-header{
     --altura-main-header: 50px;
     height: var(--altura-main-header);
     background-color:#444;
 }
-.brand{
-    display: block;
-    float: left;
-    margin: 5px 30px;
-    border-radius: 90px;
-    overflow: hidden;
-    height: 40px;
-    
-}
-.brand::after{
-    content: "Augusto Ruiz@ github.io";
-    display: block;
-    float: left;
-    width: 0px;
-    height: 40px;
-    background-color: #009dee;
-    transition: width 0.3s;
-    overflow: hidden;
-}
-.brand:hover::after{
-    width: 120px;
-    padding-left: 5px;
-    
-}
-/* .brand:hover{
-    position: fixed;
-} */
-.brand img{
-    width: 40px;
-    height: 100%;
-}
+
 .main-menu{
-    display: block;
-    margin:0px;
     text-align: center;
+    padding: 0px;
+    overflow: hidden;
 }
+
 
 .main-menu li{
     display: inline-block;
@@ -63,14 +44,22 @@ html, body{margin: 0}
     background-color: #ccc;
     color: #000;;
 }
-.wraper::after{
+
+#toggle-check[type=checkbox], .menu-toggle-icon{display: none;}
+.menu-toggle-icon{
+    width: 40px; 
+    height: 40px;
+    padding: 10px 0 0 10px;
+}
+.menu-toggle-icon span{
     display: block;
-    content: "";
-    clear: both;
+    height: 5px;
+    background-color: #fff;
+    margin: 0 0  5px ;
+    border-radius: 10px;
 }
 aside.themes{
-    width: 20%;
-    float:left;
+    width: 20%;border-right: 1px #ccc solid; padding-right: 5px;
 }
 aside.themes > ul{
     padding: 0px; 
@@ -79,9 +68,10 @@ aside.themes ul li{
     margin-bottom: 3px; 
 }
 
+aside.themes a{color: #009dee;}
+
 main{
     float: left;
-    border-left: 1px #ccc solid;
     width: 80%;
     padding-left: 15px;
 }
@@ -89,10 +79,7 @@ main{
 aside.themes, main{
     vertical-align: top;
 }
-.wraper{
-    width: 80%;
-    margin: 0 auto;
-}
+
 .suggested{
     background-color: #e7e7e7;
     padding: 15px 30px;
@@ -173,12 +160,26 @@ ul li details:hover{
 .posts-list-item a{ display: block}
 
 
+
 @media only screen and (max-width: 900px) {
     .suggested{
         display: none;
     }
 }
 @media only screen and (max-width: 768px){
+    .menu-toggle-icon{display: block}
+    .menu-toggle-icon::after{ 
+        display: inline-block;
+        content: 'Augusto Ruiz';
+        width: 100%;
+        position: absolute;
+        top: 10px;
+        text-align: center;
+        color: lavender
+    }
+    .main-header{ height: auto; min-height: 50px}
+    .main-menu{ height: 0;}
+    #toggle-check:checked  ~.main-menu{height: auto;}
     .page-footer .contact-info{
         float: none;
     }
@@ -190,11 +191,13 @@ ul li details:hover{
     aside.themes{
         display: none;
     }
-    .wraper{
+    .main-menu, .wraper{
         width: 100%;
+        flex-direction: column;
     }
-    main{
-        width: 100%;
-        padding: 20px;
+    .page-footer .contact-info{
+        float: none;
+        display: block;
     }
+    
 }
