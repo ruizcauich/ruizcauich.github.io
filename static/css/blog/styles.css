@@ -4,7 +4,7 @@ html, body{margin: 0; font-family: 'Roboto', sans-serif; }
     box-sizing: border-box;
 }
 h1,h2,h3,h4,h5,h6{ font-family: 'Open Sans', sans-serif; font-weight: lighter}
-p{ line-height: 24px}
+p, ul{ font-size: 18px; line-height: 25px; margin: 30px 0; font-weight: lighter}
 .main-menu, .wraper {
     display:flex;
     flex-flow: row wrap; 
@@ -114,11 +114,15 @@ aside.themes, main{
     padding: 0em 1em;
 }
 
-.code-section pre{
-    padding: 20px;
-    background-color: rgb(230, 230, 230);
-    border-radius: 2px;
-    border: rgb(163, 163, 163) 1px solid;
+.index-list{
+    border: gray 1px solid;
+    float: left;
+    margin: 10px;
+}
+.index-list::before{
+    display: block;
+    content: "Contenido";
+    font-weight: bolder;
 }
 
 .page-footer{
@@ -159,7 +163,14 @@ ul li details:hover{
 }
 .posts-list-item a{ display: block}
 
-
+pre{
+    border-radius: 5px;
+    border: rgb(163, 163, 163) 1px solid;
+    overflow: auto;
+    max-height: 400px;
+    font-size: 14px;
+    font-weight: bold;
+}
 
 @media only screen and (max-width: 900px) {
     .suggested{
@@ -183,13 +194,13 @@ ul li details:hover{
     .page-footer .contact-info{
         float: none;
     }
-    .code-section{
-        width: 90%;
-        overflow: scroll;
-    }
-    .code-section pre{ overflow: scroll}
+      
     aside.themes{
         display: none;
+    }
+    main{
+        width: 100%;
+        padding: 20px;
     }
     .main-menu, .wraper{
         width: 100%;
