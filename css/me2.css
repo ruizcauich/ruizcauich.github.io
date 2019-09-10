@@ -1,0 +1,11 @@
+html{
+    scroll-behavior: smooth;
+}
+.has-keyboard-background{
+background-image: url("/img/keyboard-background.png");
+background-size: cover;
+}
+
+.image.is-autox64 > img, img.is-autox64{
+height: 64px; width: auto
+}

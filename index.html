@@ -4,90 +4,348 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <!--meta http-equiv="refresh" content="5"-->
-  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-  <link rel="stylesheet" href="css/me.css">
-  <link rel="stylesheet" href="css/text-elements.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css">
+  <link rel="stylesheet" href="/css/me2.css">
   <title>Augusto Ruiz C.</title>
+  
 </head>
 <body>
-  <div id="bg"></div>
-<div class="container">
-  <header class="main-head">
-    <div class="content">
-      <a class="brand" href="#">Augusto Ruiz </a>
-      <nav class="navbar float-right">
-        <ul class="menu">
-          <li class="submenu">
-            <span class="submenu-label">Tutoriales</span>
-            <ul class="submenu-content">
-
-              <li><a href="#">HTML & CSS</a></li>
-              <li><a href="#">JavaScript</a></li>
-              <li><a href="#">Python</a></li>
-              <li><a href="#">C++</a></li>
-              <li><a href="#">Java</a></li>
-
-            </ul>
-          </li>
-          <li><a href="#">Blog</a></li>
-          <li><a href="#">Colaboradores</a></li>
-          <li><a href="#">Portafolio de proyectos</a></li>
-          <li><a id="contacto" >Contacto</a></li>
-
-
-        </ul>
-      </nav>
-
+  <div id="app">
+    <header>
+      <nav class="navbar is-black">
+        <div class="navbar-brand">
+          <a href="/" class="navbar-item"><strong>AUGUST</strong></a>
+          <!-- Show menu if showMobileMenu, which value is toggled when user click on the burger button-->
+          <a role="button" class="navbar-burger" :class="{'is-active':showMobileMenu}"  aria-label="menu" aria-expanded="false" v-on:click="toggleMenu">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+          </a>
+        </div>
+        <!-- Show menu if showMobileMenu -->
+        <div class="navbar-menu" :class="{'is-active':showMobileMenu}">
+          <div class="navbar-start">
+            <a href="#me" class="navbar-item">
+              Sobre mi
+            </a>
+            <a href="#intereses" class="navbar-item">
+              Intereses
+            </a>
+            <a href="#blog" class="navbar-item">
+              Blog
+            </a>
+            <div class="navbar-item has-dropdown is-hoverable">
+              <a class="navbar-link">Tutoriales</a>
+              <div class="navbar-dropdown ">
+                <a href="/tutoriales/python" class="navbar-item">Python</a>
+                <a href="/tutoriales/django" class="navbar-item">Django</a>
+                <a href="/tutoriales/js" class="navbar-item">JavaScript</a>
+                <a href="/tutoriales/css" class="navbar-item">CSS</a>
+              </div>
+            </div>
+          </div>
+          <div class="navbar-end">
+            <a href="#contacto" class="navbar-item">Contacto</a>
+          </div>
+        </div>
+      </nav>    
+    </header>
+    <div class="hero is-medium  has-keyboard-background">
+      <div class="hero-body">
+        <div class="container">
+          <div class="columns is-centered is-multiline is-mobile">
+            <div class="column is-narrow">
+                <figure class="image is-128x128">
+                  <img class="is-rounded" src="/img/me2.jpg">
+                </figure>
+            </div>
+            <div class="column is-full has-text-centered">
+              <p class="title has-text-white">¡Bienvenido!</p>
+              <h1>
+                <strong class="has-text-white">
+                  Mi nombre es Augusto y soy desarrollador de software.
+                </strong>
+              </h1>
+              
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-
-
-  </header>
-  <div class="content">
-    <section>
-      <div class="personal-image">
-        <img src="img/me.jpg" alt="">
+    <section class="section has-background-light">
+      <div class="container">
+        <h1 id="me"class="title has-text-link">Sobre mí</h1>
+        <h2 class="subtitle has-text-info">Esta es mi carta de presentación.</h2>
+          <p>
+            Me dedico 100% al <strong>desarrollo de software</strong> desde hace relativamente poco (Abril de 2019), sin embargo, durante el trascurso de 
+            mis estudios como Ingeniero en Sistemas he adquirido algo de experiencia en algunos lenguajes y frameworks. <br>
+            Experiencia y conocimientos que he llevado a la práctica al colaborar en proyectos afines a 
+            <strong> redes de sensores</strong> e <strong>Internet de las Cosas</strong>, mismos que han sido sometidos a diversas 
+            competencias de ciencia e innovación tanto en el estado de Quintana Roo (donde estudié) como en Jalisco; y ahora como desarrollador
+            en una Coordinación del Gobierno de Quintana Roo.
+          </p>
       </div>
     </section>
-    <section>
-      <article class="card float-left">
-          <h2>¿Quien soy?</h2>
-          <p>
-            Estudiante de Ingeniería en Sistemas Computacionales y Tecnico en la misma disciplina; soy originario del estado de Yucatán, México.
-          </p>
-          <p>
-            Me formé como <strong>administrador financiero</strong> en el Colegio de Bachilleres del Estado de Yucatán, plantel peto. En el que me integré al grupo disciplinario Físico-Matemático.
-          </p>
-          <p>
-            Como estudiante del Instituto Tecnológico de Chetumal he participado en Expociencias y el Evento de Inovación Tecnológica del TecNM en proyectos que siguen la corriente del Internet De las Cosas (IoT).
-          </p>
-      </article>
-      <article class="card float-right">
-          <h2>Intereses</h2>
-          <p>
-            Entre mis intereses se encuentran:
-          </p>
-          <ul>
-            <li>Desarrollo web  front-end/back-end.</li>
-            <li>Lenguajes de programació.n</li>
-            <li>Internet de las cosas e Internet de Todo.</li>
-            <li>Programacion de dispositivos móviles.</li>
-            <li>Educación.</li>
-            <li>Emprendimiento.</li>
-            <li>Desarrollo de sistemas embebidos.</li>
-            <li>Marketing.</li>
-            
-          </ul>
-      </article>
+    <section class="section">
+      <div class="container">
+        <h1 id="intereses" class="title has-text-link">Mis intereses</h1>
+        <div class="columns  is-centered is-multiline">
+          <div class="column is-full">
+            <p>
+              Dentro del mundo de la tecnología y el software hay muchas cosas que me atraen, 
+              podría decir que me gusta aprender de todo un poco, aunque por el momento me dedico
+              al desarrollo web con python. <br>
+            </p>
+          </div>
+          <div class="column is-3">
+            <div class="box">
+              <h2 class="subtitle has-text-centered">Python</h2>
+              <figure class="image is-autox64">
+                <img src="/img/python-logo@2x.png" alt="python-logo">
+              </figure>
+              
+              <p>Un lenguaje de programación bonito y poderoso con el que me gusta trabajar.</p>
+            </div>
+          </div>
+          <div class="column is-3">
+            <div class="box">
+              <h2 class="subtitle has-text-centered">Django</h2>
+              <div class="level">
+                <div class="level-item has-text-centered">
+                  <figure class="image is-64x64">
+                    <img src="/img/django-icon-0.png" alt="django-framework-logo">
+                  </figure>
+                </div>
+              </div>
+              <p>Un framework de desarrollo web que trabaja con python, con características muy interesantes.</p>
+            </div>
+          </div>
+          <div class="column is-3">
+            <div class="box">
+              <h2 class="subtitle has-text-centered">Git</h2>
+              <div class="level">
+                <div class="level-item has-text-centered">
+                  <figure class="image is-64x64">
+                    <img src="/img/git.png" alt="django-framework-logo">
+                  </figure>
+                </div>
+              </div>
+              <p>Considero a Git como una herramienta primordial para trabajar en el desarrollo de software.</p>
+            </div>
+          </div>
+          
+          <div class="column is-3">
+            <div class="box">
+              <h2 class="subtitle has-text-centered">GNU/Linux</h2>
+              <div class="level">
+                <div class="level-item has-text-centered">
+                  <figure class="image is-autox64"><img src="/img/gnu-linux-logo.png" alt="gnu-linux-logo"></figure>
+                </div>
+              </div>
+              <p>
+                Me gusta trabajar con distribuciones gnu/linux, en especial con las basadas en Debian y Arch.
+              </p>
+            </div>
+          </div>
+          
+          <div class="column is-3">
+            <div class="box">
+              <h2 class="subtitle has-text-centered">HTML, CSS y JS</h2>
+              <div class="level">
+                <div class="level-item has-text-centered">
+                  <figure class="image is-autox64"><img src="/img/html-css-js.png" alt="html-css-js-logo"></figure>
+                </div>
+              </div>
+              <p>
+                Me dedico al desarrollo web, esta terna no podría faltar entre mis intereses.
+              </p>
+            </div>
+          </div>
+          
+          <div class="column is-3">
+            <div class="box">
+              <h2 class="subtitle has-text-centered">Bulma.io</h2>
+              <figure class="image is-autox64">
+                <img src="/img/bulma-logo.png" alt="bulma logo">
+              </figure>
+              <p>
+                Bulma es un framework css que me ha llamado la atención por su simplicidad, gran calidad,
+                a demás de estar basado en flexbox.
+              </p>
+            </div>
+          </div>
+          
+          <div class="column is-3">
+            <div class="box">
+              <h2 class="subtitle has-text-centered">Vue.js</h2>
+              <div class="level">
+                <div class="level-item">
+                  <figure class="image is-64x64">
+                    <img src="/img/vue.js-logo.png" alt="vue-js-logo">
+                  </figure>
+                </div>
+              </div>
+              <p>
+                No tengo nada de experiencia con Vue
+                pero lo he estado aprendiendo y me parece muy interesante y práctico.
+              </p>
+            </div>
+          </div>
+          
+          <div class="column is-3">
+            <div class="box">
+              <h2 class="subtitle has-text-centered">C/C++</h2>
+              <div class="level">
+                <div class="level-item">
+                  <figure class="image is-64x64">
+                    <img src="/img/cpp-logo.png" alt="cpp-logo">
+                  </figure>
+                </div>
+              </div>
+              <p>
+                C y C++ son lenguajes de programación que me gustan mucho, considero que son muy importantes
+                para comprender muchos términos y características que se emplean en otros lenguajes.
+              </p>
+            </div>
+          </div>
+          
+          <div class="column is-3">
+            <div class="box">
+              <h2 class="subtitle has-text-centered">Android</h2>
+              <div class="level">
+                <div class="level-item">
+                  <figure class="image is-64x64">
+                    <img src="/img/android-logo.png" alt="cpp-logo">
+                  </figure>
+                </div>
+              </div>
+              <p>
+                A pesar de que me dedico al desarrollo web, también tengo cierta inclinación por el desarrollo móvil, 
+                ya sea nativo o no.
+              </p>
+            </div>
+          </div>
+          
+          <div class="column is-3">
+            <div class="box">
+              <h2 class="subtitle has-text-centered">Java</h2>
+              <div class="level">
+                <div class="level-item">
+                  <figure class="image is-64x64">
+                    <img src="/img/java-logo.jpg" alt="cpp-logo">
+                  </figure>
+                </div>
+              </div>
+              <p>
+                Java es otro lenguaje que me gusta, aunque ya no lo empleo como antes.
+              </p>
+            </div>
+          </div>
+          
+        </div> 
+        <!-- fin de columns -->
+      </div>
+      <!-- fin de container -->
     </section>
+    <!-- fin de section -->
+
+    <!-- HERO para la seccion BLog -->
+    <section class="hero is-light is-medium is-bold">
+      <div class="hero-body">
+        <div class="container">
+          <div class="columns is-multiline">
+            <div class="column is-3">
+                <h1 id="blog" class="title">Blog</h1>
+                <h2 class="subtitle">Entradas recientes</h2>
+            </div>
+            <!-- end of title column -->
+
+            <div class="column is-8">
+              <div class="columns is-multiline">
+                <!-- for each post, ther is a colum -->
+                <div class="column is-4" v-for="post in postList">
+
+                  <div class="box">
+                    <a v-bind:href="post.url"> {{post.title}}</a>
+                    <p class="help">{{post.date}}</p>
+                  </div>
+
+                </div>
+                <!-- end of box column -->
+              </div>
+              <!-- end of columns for boxes -->
+            </div>
+            <!-- end of column for post boxes -->
+          </div>
+          <!-- end of outer columns -->
+
+        </div>
+        <!-- end of container -->
+      </div>
+      <!-- end of hero-body -->
+    </section>
+    <!-- fin de section blog -->
+
+    <section id="contacto" class="hero is-medium is-dark">
+      <div class="hero-body">
+        <div class="container">
+            <h1 class="title">
+                <span class="icon is-large has-text-info">
+                    <i class="far fa-address-card fa-3x"></i>
+                </span>
+                Contacto</h1>
+            <p>Por el momento no cuento con un formulario de contacto, pero puedes enviar <br>
+              un correo a mi e-mail y te responderé lo más pronto posible. <br>
+              <br>
+              <a class="has-text-white" href="mailto:contacto.augustoruiz@gmail.com">contacto.augustoruiz@gmail.com</a>
+            </p>
+              
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer has-background-black-ter">
+      <div class="content has-text-white">
+        <p class="is-size-4 has-text-weight-bold">© 2019 Augusto Ruiz</p>
+        <p >
+          Sitio web personal, todos los derechos reservados.
+        </p>
+        <div class="columns">
+          <div class="column is-6">
+            <a href="https://bulma.io">
+              <img src="/img/made-with-bulma.png" alt="Hecho con bulma" width="128" height="24">
+            </a>
+          </div>
+          <div class="column is-6 has-text-right">
+            <a class="has-text-white is-size-3" href="https://github.com/ruizcauich">
+              <span class="icon">
+                <i class="fab fa-github-square"></i>
+              </span>
+            </a>
+            &nbsp;
+            <a class="has-text-white is-size-3" href="https://twitter.com/ruizcauich">
+              <span class="icon">
+                <i class="fab fa-twitter-square"></i>
+              </span>
+            </a>
+            &nbsp;
+            <a class="has-text-white is-size-3" href="https://linkedin.com/in/augusto-ruiz/">
+              <span class="icon">
+                <i class="fab fa-linkedin"></i>
+              </span>
+            </a>
+          </div>
+        </div>
+        
+      </div>
+    </footer>
+
   </div>
-  <!--div class="contact_window">
-    <span class="close_window">Cerrar</span>
-  </div-->
+  <!-- end of app -->
 
-</div>
-<script type="text/javascript" src="js/script.js">
-
-</script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.10/vue.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.0/axios.min.js"></script>
+  <script src="/js/v-app.js"></script>
 </body>
 </html>
