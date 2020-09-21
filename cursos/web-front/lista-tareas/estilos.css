@@ -1,0 +1,102 @@
+*{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: azure;
+}
+
+
+
+small{
+    /* Color de fondo */
+    background-color: rgb(150, 204, 235);
+    /* Separacion entre borde y el contenido */
+    padding: 20px;
+    padding-left: 30px;
+    /* Separación entre el borde y el contenido que lo rodea */
+    margin: 10px;
+    /* Especifica el comportamiento de visualización */
+    display: block;
+    /* Una imagen de fondo */
+    background-image: url("https://wiki.octave.org/wiki/images/thumb/a/ae/Info_icon.svg/256px-Info_icon.svg.png");
+    background-size: 25px;
+    /* No repite la imagen cuando esta es más pequela que el contenedor */
+    background-repeat: no-repeat;
+    /* Psiciona la imagen de fondo */
+    background-position: left;
+}
+
+
+button, .button{
+    background-color: #60e0b2;
+    /* Borde de 2px, sólido (hay otros tipos) y con color */
+    border: 2px solid #4cd1a2;
+    padding: 10px;
+    /* Permite dar una redondez a as esquinas */
+    border-radius: 5px;
+    /* Color del texto */
+    color: #373737;
+    /* línea que se dibuja alrededor de los elementos, FUERA de los bordes,
+     para hacer que el elemento "destaque". */
+    outline: none;
+}
+
+button:hover, .button:hover{
+    background-color: #6be6b9;
+
+}
+
+input[type=text]{
+    padding:10px;
+    background-color: #fff;
+    border: 2px solid #d5d2d2;
+    border-radius: 5px;
+    outline: none;
+}
+
+input[type=text]:hover{
+    border-color: #bdbcbc;
+}
+
+input[type=text]:focus{
+    border-color: #9ac9e4;
+}
+
+
+ul{
+    /* No nos sirve pues no podemos posicionar bien la imagen */
+    /* list-style-image: url("https://static.thenounproject.com/png/2931154-200.png"); */
+    list-style: none; 
+    padding-left: 0px;
+    font-size: 18px;
+    max-height: 300px;
+    overflow-y: auto;
+    border: 1px solid #b8b8b8;
+    /* Los prefijos -webkit- y -moz- permiten la compatibilidad
+    con ciertos navegadores */
+    -webkit-box-shadow: 3px 4px 8px -3px #616161;
+    -moz-box-shadow: 3px 4px 8px -3px #616161;
+    /* distancia X  | distancia Y | difuminado | propagado o extención | color de la sombra */
+    box-shadow: 3px 4px 8px -3px #616161;
+
+}
+
+/* Selector descendente: los li dentro de ul */
+ul li{
+    background-image: url("https://static.thenounproject.com/png/2931154-200.png");
+    background-color: #fff;
+    background-size: 10px;
+    background-position: 5px center;
+    background-repeat: no-repeat;
+    padding: 5px;
+    padding-left: 20px;
+    border-bottom:1px solid #bdbdbd ;
+}
+
+ul li:hover{
+    background-color: #e9f2f2;
+}
+
+/* Los li con clase done dentro de ul */
+ul li.done{
+    background-color: #4cd193;
+    
+}
